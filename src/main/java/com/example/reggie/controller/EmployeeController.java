@@ -8,6 +8,7 @@ import com.example.reggie.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,12 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController  {
+
+    @Value("${reggie.test}")
+    private String myPath;
+
+    @Value("${reggie.test1}")
+    private String myPath1;
 
     @Autowired
     private EmployeeService employeeService;
@@ -110,6 +117,9 @@ public class EmployeeController  {
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name) {
         log.info("page = {}, pageSize = {}, name = {}",page, pageSize, name);
+
+        log.info("path测试：{}", myPath);
+        log.info("path测试1：{}", myPath1);
 
         // 构造分页构造器
         Page pageInfo = new Page(page, pageSize);
