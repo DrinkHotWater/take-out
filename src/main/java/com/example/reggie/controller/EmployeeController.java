@@ -20,11 +20,6 @@ import java.time.LocalDateTime;
 @RequestMapping("/employee")
 public class EmployeeController  {
 
-    @Value("${reggie.test}")
-    private String myPath;
-
-    @Value("${reggie.test1}")
-    private String myPath1;
 
     @Autowired
     private EmployeeService employeeService;
@@ -117,9 +112,6 @@ public class EmployeeController  {
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name) {
         log.info("page = {}, pageSize = {}, name = {}",page, pageSize, name);
-
-        log.info("path测试：{}", myPath);
-        log.info("path测试1：{}", myPath1);
 
         // 构造分页构造器
         Page pageInfo = new Page(page, pageSize);
