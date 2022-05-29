@@ -10,6 +10,14 @@ spring:
       url: jdbc:mysql://localhost:3306/laokan?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: root
+  redis:
+    host: 106.15.185.171
+    port: 6379
+#    password: root
+    database: 0
+  cache:
+    redis:
+      time-to-live: 1800000 # 设置缓存有效期(单位:ms)
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
@@ -22,3 +30,4 @@ mybatis-plus:
 
 reggie:
   path: D:\JavaProjects\reggie_take_out\photos\
+
