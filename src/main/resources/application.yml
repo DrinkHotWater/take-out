@@ -29,6 +29,8 @@ mybatis-plus:
       id-type: ASSIGN_ID
 
 reggie:
-#  path: D:\JavaProjects\reggie_take_out\photos\
+  #本地路径
+#  path: D:\JavaProjects\img\
+  #服务器路径
   path: /usr/local/img/
 
