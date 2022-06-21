@@ -38,6 +38,10 @@ public class LoginCheckFilter implements Filter {
                 "/front/**",
                 "/user/sendMsg", // 发送验证码
                 "/user/login",   // 移动端用户登录
+                "/doc.html", // 以下4项均为swagger自动生成api文档相关路径
+                "/webjars/**",
+                "/swagger-resources",
+                "/v2/api-docs",
         };
 
         // 2、判断本次请求路径是否在放行路径数组中，若在则不需要处理，直接放行
