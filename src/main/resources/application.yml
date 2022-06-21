@@ -29,5 +29,6 @@ mybatis-plus:
       id-type: ASSIGN_ID
 
 reggie:
-  path: D:\JavaProjects\reggie_take_out\photos\
+#  path: D:\JavaProjects\reggie_take_out\photos\
+  path: /usr/local/img/
 
